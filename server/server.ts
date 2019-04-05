@@ -1,4 +1,4 @@
 import app from "./app.js";
-const port = 8080;
+const port = 5309;
 
-app.listen(port, () => console.log(`server is listening on port ${port}`));
+app.listen(port);

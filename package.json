@@ -10,11 +10,13 @@
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development --watch",
     "build-prod": "webpack -p --mode production",
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "build": "tsc"
+    "build": "tsc",
+    "server-dev": "nodemon -r esm build/server.js",
+    "server": "node -r esm build/server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "esm": "^3.2.22",
     "express": "^4.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -31,7 +33,6 @@
     "css-loader": "^2.1.1",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
-    "tslint": "^5.15.0",
     "typescript": "^3.4.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
